@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <script>
+      function openModal(title, description, imageUrl, linkUrl1, linkUrl2) {
+        document.getElementById("modal-title").innerText = title;
+        document.getElementById("modal-description").innerText = description;
+        document.getElementById("modal-image").src = imageUrl;
+        document.getElementById("modal-linkgambar").href = linkUrl1;
+        document.getElementById("modal-linkpeta").href = linkUrl2;
+        document.getElementById("modal").style.display = "flex";
+      }
+
+      function closeModal() {
+        document.getElementById("modal").style.display = "none";
+      }
+    </script>
+    <link rel="stylesheet" href="Untitled-3.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rekomendasi Pantai di Jogja</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+     <!-- Modal -->
+     <div id="modal">
+      <div id="modal-content">
+        <h3 id="modal-title"></h3>
+        <p id="modal-description"></p>
+        <img id="modal-image" alt="Gambar Modal" />
+        <a id="modal-linkgambar" href="#" target="_blank">Lihat gambar lain</a>
+        <a id="modal-linkpeta" href="#" target="_blank">Lihat di Peta</a>
+        <span id="close-btn" onclick="closeModal()">Tutup</span>
+      </div>
+    </div>
+    <!-- Menu Navigasi -->
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#pantai">Pantai</a></li>
+        <li><a href="#fasilitas">Fasilitas</a></li>
+        <li><a href="#aktivitas">Aktivitas</a></li>
+        <li><a href="#tentang">Tentang</a></li>
+      </ul>
+    </nav>
+
+    <!-- Header -->
+    <header id="home">
+      <h1>Rekomendasi Pantai di Jogja</h1>
+      <p>Temukan pantai-pantai terbaik di Yogyakarta untuk liburanmu!</p>
+    </header>
+    
+    <!-- Daftar Pantai -->
+    <div class="container text-center">
+      <div class="gallery-container row align-items-center justify-content-center">
+  
+       <section class="pantai-list col p-3" id="pantai">
+          <div class="gallery" onclick="openModal(
+          'Pantai Parangtritis',
+          'Pantai Parangtritis merupakan salah satu pantai yang paling terkenal di Jogja. Terletak di selatan kota Yogyakarta, pantai ini terkenal dengan pasir hitamnya dan ombak yang besar.',
+          'Paris.png',
+          'Gambar Parangtritis.html',
+          'https://maps.app.goo.gl/dh39uHmRNGFEwUwk9'
+          )">
+          <div>
+          <img
+            src="Paris.png"
+            alt="Pantai Parangtritis"
+          />
+          <h3>Pantai Parangtritis</h3>
+          </div>
+       </section>
+       <section class="pantai-list col p-3" id="pantai">
+         <div class="gallery" onclick="openModal(
+          'Pantai Indrayanti',
+          'Pantai Indrayanti memiliki pasir putih yang lembut dan air laut yang jernih. Dikenal sebagai pantai yang bersih dan terawat, pantai ini menawarkan berbagai fasilitas wisata seperti warung makan, tempat parkir yang luas, dan gazebo untuk bersantai menikmati keindahan alam.',
+          'Indrayanti.png',
+          'Gambar Indrayati.html',
+          'https://maps.app.goo.gl/rjWSGygQxnSSuM1G7'
+         )">
+         <div>
+          <img 
+          src="Indrayanti.png" 
+          alt="Pantai Indrayanti"
+          />
+         <h3>Pantai Indrayanti</h3>
+         </div>
+       </section>
+       <section class="pantai-list col p-3" id="pantai">
+         <div class="gallery" onclick="openModal(
+          'Pantai Pok Tunggal',
+          'Pantai Pok Tunggal dikenal dengan batu karang besar yang menjulang di tengah pantai dan suasana yang lebih tenang. Pantai ini menawarkan pemandangan yang memukau dan sangat cocok untuk bersantai atau berkemah sambil menikmati alam yang asri.',
+          'Pok Tunggal.png',
+          'Gambar Pok Tunggal.html',
+          'https://maps.app.goo.gl/n739vuuKuxYfPsPj8'
+         )">
+         <div>
+          <img 
+          src="Pok Tunggal.png" 
+          alt="Pantai Pok Tunggal" 
+          />
+          <h3>Pantai Pok Tunggal</h3>
+         </div>
+       </section>
+       <section class="pantai-list col p-3" id="pantai">
+         <div class="gallery" onclick="openModal(
+          'Pantai Sundak',
+          'Pantai Sundak terkenal dengan keindahan batu karang dan pasir putihnya yang lembut. Pantai ini memiliki atmosfer yang damai dan cocok untuk mereka yang ingin menikmati ketenangan di tengah alam yang indah. Pantai ini juga sering digunakan untuk kegiatan snorkeling.',
+          'sundak.png',
+          'Gambar Sundak.html',
+          'https://maps.app.goo.gl/ZZFvytaYSrLXGPne8'
+         )">
+         <div>
+          <img 
+          src="sundak.png" 
+          alt="Pantai Sundak" />
+          <h3>Pantai Sundak</h3>
+         </div>
+       </section>
+       <section class="pantai-list col p-3" id="pantai">
+         <div class="gallery" onclick="openModal(
+          'Pantai Siung',
+          'Pantai Siung adalah surga bagi para pecinta olahraga panjat tebing. Terletak di Gunung Kidul, pantai ini menawarkan tebing-tebing karang yang menantang dan pemandangan laut yang menakjubkan. Selain itu, pantai ini juga memiliki pasir putih dan air laut yang jernih.',
+          'Siung.png',
+          'Gambar Siung.html',
+          'https://maps.app.goo.gl/UrrYxEYuBghYNtrQ6'
+         )">
+         <div>
+          <img 
+          src="Siung.png" 
+          alt="Pantai Siung" />
+          <h3>Pantai Siung</h3>
+         </div>
+       </section>
+       <section class="pantai-list col p-3" id="pantai">
+         <div class="gallery" onclick="openModal(
+          'Pantai Timang',
+          'Pantai Timang adalah pantai yang menawarkan pengalaman unik dengan jembatan gantung yang menghubungkan pulau kecil di tengah laut. Selain itu, pantai ini juga dikenal sebagai spot yang menarik untuk bermain gondola dan menikmati pemandangan yang spektakuler.',
+          'Timang.png',
+          'Gambar Timang.html',
+          'https://maps.app.goo.gl/8bPkGDVaJuLmki7B8'
+         )">
+         <div>
+          <img 
+          src="Timang.png" 
+          alt="Pantai Timang" />
+          <h3>Pantai Timang</h3>
+         </div>
+       </section>
+       <section class="pantai-list col p-3" id="pantai">
+         <div class="gallery" onclick="openModal(
+          'Pantai Watu Bolong',
+          'Pantai Watu Bolong terkenal dengan batu karang besar yang memiliki lubang di tengahnya, yang menjadi ciri khas pantai ini. Lokasinya yang cukup terpencil membuat pantai ini cocok bagi wisatawan yang ingin menikmati suasana sepi dan pemandangan yang memukau.',
+          'Watu bolong.png',
+          'Gambar Watu Bolong.html',
+          'https://maps.app.goo.gl/BVhdtRB1JutgWFY77'
+         )">
+         <div>
+          <img 
+          src="Watu bolong.png" 
+          alt="Pantai Watu Bolong" />
+          <h3>Pantai Watu Bolong</h3>
+         </div>
+       </section>
+       <section class="pantai-list col p-3" id="pantai">
+         <div class="gallery" onclick="openModal(
+          'Pantai Ngandong',
+          'Pantai Ngandong adalah pantai yang relatif sepi namun memiliki pesona alam yang luar biasa. Pantai ini dikenal dengan pasir putihnya yang lembut dan batu karang yang menambah keindahannya. Cocok untuk kamu yang ingin berlibur dengan suasana yang tenang dan jauh dari keramaian.',
+          'Ngandong.png',
+          'Gambar Ngandong.html',
+          'https://maps.app.goo.gl/egcHXgywqoRqAxaW9'
+         )">
+         <div>
+          <img 
+          src="Ngandong.png" 
+          alt="Pantai Ngandong" />
+          <h3>Pantai Ngandong</h3>
+         </div>
+        </div>
+       </section>
+       <section class="pantai-list col p-3" id="pantai"> 
+         <div class="gallery" onclick="openModal(
+          'Pantai Glagah Indah',
+          'Pantai Glagah Indah terletak di daerah Kulon Progo, dan terkenal dengan hamparan pasir hitamnya yang kontras dengan warna biru laut. Pantai ini juga memiliki laguna yang tenang, sangat cocok untuk bersantai dan menikmati keindahan alam yang menenangkan.',
+          'Glagah.png',
+          'Gambar Glagah Indah.html',
+          'https://maps.app.goo.gl/VpyScx81B33yMyFi9'
+         )">
+         <div>
+          <img 
+          src="Glagah.png" 
+          alt="Pantai Glagah" />
+          <h3>Pantai Glagah Indah</h3>
+         </div>
+        </div>
+        
+       </section>
+      </div>
+    </div>  
+
+    <!-- Fasilitas di Pantai -->
+    <section class="information-section" id="fasilitas">
+      <div class="container">
+        <h2>Fasilitas di Pantai-pantai Jogja</h2>
+        <p>
+          Pantai-pantai di Jogja memiliki fasilitas yang cukup lengkap untuk
+          menunjang kenyamanan pengunjung. Berikut adalah beberapa fasilitas
+          umum yang dapat ditemukan di pantai-pantai tersebut:
+        </p>
+        <div class="card-container col p-4">
+          <div class="card" style="width: 15rem;">
+            <img src="Area Parkir.png" class="card-img-top" alt="Tempat Parkir">
+            <div class="card-body">
+              <h5 class="card-title">Area Parkir</h5>
+              <p class="card-text">Sebagian besar pantai memiliki area parkir yang luas untuk kendaraan roda dua maupun roda empat.</p>
+            </div>
+          </div>
+          <div class="card" style="width: 15rem;">
+            <img src="Kamar Mandi Umum.png" class="card-img-top" alt="Kamar Mandi">
+            <div class="card-body">
+              <h5 class="card-title">Kamar Mandi Umum</h5>
+              <p class="card-text">Beberapa pantai menyediakan fasilitas kamar mandi umum bagi pengunjung yang ingin berganti pakaian setelah berenang atau bermain air.</p>
+            </div>
+          </div>
+          <div class="card" style="width: 15rem;">
+            <img src="warung makan.png" class="card-img-top" alt="Warung Makan">
+            <div class="card-body">
+              <h5 class="card-title">Warung Makan</h5>
+              <p class="card-text">Tersedia banyak warung yang menjual makanan dan minuman, termasuk seafood segar yang khas di sekitar pantai.</p>
+            </div>
+          </div>
+          <div class="card" style="width: 15rem;">
+            <img src="Gazebo.png" class="card-img-top" alt="Gazebo">
+            <div class="card-body">
+              <h5 class="card-title">Gazebo dan Tempat Duduk</h5>
+              <p class="card-text">Banyak pantai yang dilengkapi dengan gazebo atau tempat duduk nyaman untuk bersantai sambil menikmati pemandangan laut.</p>
+            </div>
+          </div>
+          <div class="card" style="width: 15rem;">
+            <img src="Persewaan.png" class="card-img-top" alt="Tempat Penyewaan">
+            <div class="card-body">
+              <h5 class="card-title">Tempat Penyewaan Peralatan</h5>
+              <p class="card-text">Beberapa pantai seperti Pantai Indrayanti dan Pantai Pok Tunggal menyediakan tempat penyewaan peralatan snorkeling, perahu, dan alat selancar.</p>
+            </div>
+          </div>
+          <div class="card" style="width: 15rem;">
+            <img src="Free Wifi.png" class="card-img-top" alt="Wifi">
+            <div class="card-body">
+              <h5 class="card-title">Wifi Gratis</h5>
+              <p class="card-text">Beberapa pantai populer seperti Pantai Parangtritis memiliki fasilitas Wi-Fi gratis yang dapat diakses oleh pengunjung yang ingin tetap terhubung saat menikmati liburan mereka.</p>
+            </div>
+          </div>
+          <div class="card" style="width: 15rem;">
+            <img src="Penginapan.png" class="card-img-top" alt="Penginapan">
+            <div class="card-body">
+              <h5 class="card-title">Penginapan</h5>
+              <p class="card-text">Beberapa pantai di Jogja, seperti Pantai Indrayanti dan Pantai Timang, memiliki penginapan yang dekat dengan pantai untuk memudahkan wisatawan yang ingin menginap dan menikmati suasana pantai lebih lama.</p>
+            </div>
+          </div>
+          <div class="card" style="width: 15rem;">
+            <img src="Kawasan Ramah Keluarga.png" class="card-img-top" alt="Kawasan Ramah Keluarga">
+            <div class="card-body">
+              <h5 class="card-title">Kawasan Ramah Keluarga</h5>
+              <p class="card-text">Beberapa pantai seperti Pantai Glagah dilengkapi dengan fasilitas untuk keluarga seperti taman bermain anak dan jalur pejalan kaki yang nyaman.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Aktivitas yang Bisa Dilakukan di Pantai -->
+    <section class="information-section" id="aktivitas">
+      <div class="container">
+        <h2>Aktivitas yang Bisa Dilakukan di Pantai</h2>
+        <p>
+          Pantai-pantai di Jogja menawarkan berbagai aktivitas seru dan
+          menyenangkan yang bisa dilakukan oleh pengunjung. Beberapa aktivitas
+          yang populer di antaranya:
+        </p>
+        <ul>
+          <li>
+            <strong>Bermain Selancar:</strong> Pantai Parangtritis dan Pantai
+            Indrayanti terkenal dengan ombak besar yang cocok untuk kegiatan
+            selancar bagi para penggemar olahraga air.
+          </li>
+          <li>
+            <strong>Berenang:</strong> Beberapa pantai seperti Pantai Indrayanti
+            dan Pantai Pok Tunggal memiliki ombak yang lebih tenang, sangat
+            cocok untuk berenang dan bermain air.
+          </li>
+          <li>
+            <strong>Foto-foto:</strong> Keindahan alam dan pemandangan matahari
+            terbenam yang menakjubkan membuat pantai-pantai ini menjadi tempat
+            yang sangat populer bagi para pecinta fotografi.
+          </li>
+          <li>
+            <strong>Jalan-jalan di Pasir Putih:</strong> Nikmati keindahan pasir
+            putih yang bersih sambil berjalan-jalan di sepanjang pantai,
+            terutama di Pantai Indrayanti dan Pantai Pok Tunggal.
+          </li>
+          <li>
+            <strong>Menikmati Kuliner:</strong> Jangan lewatkan kesempatan untuk
+            menikmati kuliner khas pantai seperti ikan bakar, cumi, dan berbagai
+            makanan laut segar lainnya yang disajikan di warung-warung sekitar
+            pantai.
+          </li>
+          <li>
+            <strong>Menikmati Keindahan Alam:</strong> Aktivitas santai lainnya
+            seperti berkemah atau menikmati pemandangan matahari terbenam di
+            Pantai Timang dan Pantai Sundak sangat populer di kalangan
+            wisatawan.
+          </li>
+          <li>
+            <strong>Panjat Tebing:</strong> Bagi yang suka tantangan, Pantai
+            Siung menawarkan kegiatan panjat tebing yang sangat menantang di
+            tebing-tebing karang sekitar pantai.
+          </li>
+          <li>
+            <strong>Snorkeling:</strong> Pantai Ngandong terkenal dengan airnya
+            yang jernih dan terumbu karang yang indah, menjadikannya tempat yang
+            ideal untuk snorkeling.
+          </li>
+          <li>
+            <strong>Wisata Perahu:</strong> Di Pantai Glagah, pengunjung dapat
+            menikmati wisata perahu menyusuri laut yang tenang, serta menikmati
+            pemandangan pesisir yang indah.
+          </li>
+          <li>
+            <strong>Spot Foto Alam:</strong> Pantai Ngandong juga menawarkan
+            pemandangan alam yang eksotis, sangat cocok untuk pengunjung yang
+            suka fotografi alam dan pemandangan laut.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Tentang Kami -->
+    <section class="information-section" id="tentang">
+      <div class="container">
+        <h2>Tentang Website Ini</h2>
+        <p>
+          Website ini hadir untuk memberikan rekomendasi pantai-pantai terbaik
+          di Yogyakarta, serta informasi terkait aktivitas yang bisa dilakukan
+          dan fasilitas yang ada di setiap pantai. Kami berharap informasi ini
+          dapat membantu Anda merencanakan liburan yang menyenangkan di Jogja.
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+      </div>
+      <ul>
+        <p>&copy; 2024 Rekomendasi Pantai Jogja | All Rights Reserved</p>
+      </ul>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>

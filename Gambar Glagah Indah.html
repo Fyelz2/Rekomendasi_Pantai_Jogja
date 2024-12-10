@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gambar Pantai Glagah Indah</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+      }
+      .main-image {
+        width: 80%;
+        max-width: 600px;
+        margin: 20px 0;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .main-image img {
+        width: 100%;
+        display: block;
+      }
+      .thumbnails {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      .thumbnails img {
+        width: 100px;
+        height: 75px;
+        object-fit: cover;
+        cursor: pointer;
+        border: 2px solid transparent;
+        border-radius: 5px;
+        transition: transform 0.3s, border-color 0.3s;
+      }
+      .thumbnails img:hover {
+        transform: scale(1.1);
+        border-color: #007bff;
+      }
+      .thumbnails img.active {
+        border-color: #007bff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-image">
+      <img id="displayedImage" src="Glagah new.png" alt="Glagah Indah" />
+    </div>
+    <div class="thumbnails">
+      <img src="Glagah new.png" alt="Thumbnail 1" data-full="Glagah new.png" />
+      <img
+        src="Glagah Indah 1.png"
+        alt="Thumbnail 2"
+        data-full="Glagah Indah 1.png"
+      />
+      <img
+        src="Glagah Indah 2.png"
+        alt="Thumbnail 3"
+        data-full="Glagah Indah 2.png"
+      />
+      <img
+        src="Glagah Indah 3.png"
+        alt="Thumbnail 4"
+        data-full="Glagah Indah 3.png"
+      />
+    </div>
+
+    <script>
+      const displayedImage = document.getElementById("displayedImage");
+      const thumbnails = document.querySelectorAll(".thumbnails img");
+
+      thumbnails.forEach((thumbnail) => {
+        thumbnail.addEventListener("click", () => {
+          // Update the main image source
+          displayedImage.src = thumbnail.dataset.full;
+
+          // Highlight the active thumbnail
+          thumbnails.forEach((img) => img.classList.remove("active"));
+          thumbnail.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>
