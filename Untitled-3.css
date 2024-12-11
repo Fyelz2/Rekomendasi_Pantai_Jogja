@@ -72,10 +72,10 @@ header h1 {
 
 /* Gaya untuk setiap elemen gallery */
 .gallery {
-  /* display: flex; */
+  display: flex;
   flex-direction: wrap;
   align-items: center; /* Menempatkan konten di tengah secara horizontal */
-  width: 250px; /* Gambar menyesuaikan dengan lebar elemen */
+  width: 320px; /* Gambar menyesuaikan dengan lebar elemen */
   height: auto;
   text-align: center;
   border: 1px solid #ddd; /* Opsional, untuk pembatas */
