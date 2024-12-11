@@ -55,6 +55,7 @@ header {
   padding: 150px 20px;
   text-align: center;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+  margin-top: 60px;
 }
 
 header h1 {
@@ -471,6 +472,10 @@ footer p {
 
   nav a {
     text-align: center;
+  }
+
+  header {
+    margin-top: 75px; /* Jarak header dari navigasi untuk tampilan mobile */
   }
   
   header h1 {
