@@ -39,6 +39,7 @@ nav ul li a {
   font-size: 1.2rem;
   text-transform: uppercase;
   font-weight: bold;
+  text-align: center;
 }
 
 nav ul li a:hover {
@@ -464,12 +465,8 @@ footer p {
     align-items: stretch;
   }
 
-  nav ul li {
+  nav li {
     text-align: center;
-  }
-
-  header {
-    padding-top: 90px; /* Sesuaikan tinggi navigasi pada HP */
   }
 
   header h1 {
