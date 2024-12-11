@@ -55,6 +55,7 @@ header {
   padding: 150px 20px;
   text-align: center;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+  padding-top: 60px;
 }
 
 header h1 {
