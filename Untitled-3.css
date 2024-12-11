@@ -465,11 +465,11 @@ footer p {
   }
 
   nav ul li {
-    text-align: left;
+    text-align: center;
   }
 
   header {
-    padding-top: 75px; /* Tambahkan jarak untuk navigasi */
+    padding-top: 90px; /* Sesuaikan tinggi navigasi pada HP */
   }
 
   header h1 {
