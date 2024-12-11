@@ -20,7 +20,7 @@ nav {
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 1000;
+  z-index: 999;
 }
 
 nav ul {
@@ -83,6 +83,7 @@ header h1 {
   padding: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Opsional, untuk estetika */
   transition: transform 0.2s; /* Animasi saat hover */
+  z-index: 1000;
 }
 
 .gallery img {
@@ -458,6 +459,15 @@ footer p {
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  nav li {
+    text-align: left;
+  }
+  
   header h1 {
     font-size: 2.5rem;
   }
