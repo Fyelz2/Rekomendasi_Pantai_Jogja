@@ -32,7 +32,6 @@ nav ul {
 nav ul li {
   display: inline-block;
   margin-right: 20px;
-  text-align: center;
 }
 
 nav ul li a {
@@ -464,11 +463,16 @@ footer p {
   nav ul {
     flex-direction: column;
     align-items: stretch;
+    text-align: center;
   }
 
   nav li {
     text-align: center;
   }
+  
+  nav a {
+      text-align: center; /* Tetap memastikan teks di tengah */
+    }
   
   header h1 {
     font-size: 2.5rem;
