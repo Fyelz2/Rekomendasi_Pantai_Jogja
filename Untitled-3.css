@@ -20,7 +20,7 @@ nav {
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 999;
+  z-index: 1000;
 }
 
 nav ul {
@@ -472,6 +472,10 @@ footer p {
   
   nav a {
       text-align: center; /* Tetap memastikan teks di tengah */
+    }
+
+  header {
+      padding-top: 75px; /* Menyesuaikan tinggi navigasi pada tampilan HP */
     }
   
   header h1 {
